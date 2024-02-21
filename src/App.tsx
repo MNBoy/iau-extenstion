@@ -1,4 +1,4 @@
-import { Home } from '@components/pages/Home';
+import { Convert, Home } from '@components/pages';
 import { useEffect, useState } from 'react';
 import { useAppStore } from './lib';
 
@@ -26,6 +26,9 @@ function App() {
   switch (page) {
     case 'home':
       return <Home />;
+
+    case 'convert':
+      return <Convert />;
   }
 }
 

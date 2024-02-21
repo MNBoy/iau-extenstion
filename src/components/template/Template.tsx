@@ -3,6 +3,7 @@ import { Button } from './Button/Button';
 import { Divider } from './Divider/Divider';
 import { Input } from './Input/Input';
 import { InputNumber } from './Input/InputNumber';
+import { Link } from './Link/Link';
 import { Listbox } from './Listbox/Listbox';
 import { Select } from './Select/Select';
 import { User } from './User/User';
@@ -18,6 +19,7 @@ Template.Input = Input;
 Template.InputNumber = InputNumber;
 Template.AutoComplete = AutoComplete;
 Template.User = User;
+Template.Link = Link;
 Template.Listbox = Listbox;
 
 export { Template };

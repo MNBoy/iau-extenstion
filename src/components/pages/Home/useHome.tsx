@@ -1,6 +1,6 @@
 import { useAppStore } from '@lib/store';
 import { RecoveryConvert } from 'iconsax-react';
-import { useEffect } from 'react';
+import { Key, useEffect } from 'react';
 
 interface IProfile {
   name: string;
@@ -16,7 +16,7 @@ interface IListboxItem {
 
 const listItems: IListboxItem[] = [
   {
-    key: 'convertText',
+    key: 'convert',
     label: 'تبدیل اسم دروس',
     description: 'برای جست و جو درس میتونید از این قسمت استفاده کنید',
     icon: <RecoveryConvert variant='Bulk' />,
@@ -24,7 +24,7 @@ const listItems: IListboxItem[] = [
 ];
 
 const useHome = () => {
-  const { setProfile, profile } = useAppStore();
+  const { setProfile, setPage, profile } = useAppStore();
 
   useEffect(() => {
     chrome.tabs.query(
@@ -74,7 +74,11 @@ const useHome = () => {
     };
   }, []);
 
-  return { profile, listItems };
+  const actionHandler = (key: Key) => {
+    setPage(`${key}`);
+  };
+
+  return { profile, listItems, actionHandler };
 };
 
 export default useHome;
