@@ -17,14 +17,15 @@ export const Input: FC<IProps> = ({ control, errors, ...rest }) => {
         render={({ field: { onChange, value } }) => (
           <NxUiInput
             {...rest}
+            size='sm'
             onChange={onChange}
             classNames={{
               inputWrapper: 'focus-within:outline-primary',
-              label: 'rtl:right-0',
+              label: 'rtl:right-2',
               ...rest.classNames,
             }}
             value={value}
-            className={clsx(rest.className)}
+            className={clsx('scale-90', rest.className)}
             isInvalid={!!errors[`${rest.name}`]?.message}
             errorMessage={errors[`${rest.name}`]?.message}
           />
@@ -36,12 +37,13 @@ export const Input: FC<IProps> = ({ control, errors, ...rest }) => {
   return (
     <NxUiInput
       {...rest}
+      size='sm'
       classNames={{
         inputWrapper: 'focus-within:outline-primary',
-        label: 'rtl:right-0',
+        label: 'rtl:right-2',
         ...rest.classNames,
       }}
-      className={clsx(rest.className)}
+      className={clsx('scale-90', rest.className)}
     />
   );
 };

@@ -1,6 +1,6 @@
 import { Convert, Home } from '@components/pages';
 import { useEffect, useState } from 'react';
-import { useAppStore } from './lib';
+import { useAppStore } from './store';
 
 function App() {
   const [tabUrl, setTabUrl] = useState<string>();

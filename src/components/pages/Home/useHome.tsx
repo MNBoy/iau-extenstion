@@ -1,6 +1,6 @@
-import { useAppStore } from '@lib/store';
 import { RecoveryConvert } from 'iconsax-react';
 import { Key, useEffect } from 'react';
+import { useAppStore } from 'store/store';
 
 interface IProfile {
   name: string;

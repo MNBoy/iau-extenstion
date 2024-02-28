@@ -1,5 +1,6 @@
 import { AutoComplete } from './AutoComplete/AutoComplete';
 import { Button } from './Button/Button';
+import { Code } from './Code/Code';
 import { Divider } from './Divider/Divider';
 import { Input } from './Input/Input';
 import { InputNumber } from './Input/InputNumber';
@@ -21,5 +22,6 @@ Template.AutoComplete = AutoComplete;
 Template.User = User;
 Template.Link = Link;
 Template.Listbox = Listbox;
+Template.Code = Code;
 
 export { Template };
